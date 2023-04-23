@@ -2,7 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import { ProductModel } from "../models/Products.js";
 import { UserModel } from "../models/Users.js";
-import { verifyToken } from "./users.js"
 
 const router = express.Router();
 
@@ -16,7 +15,7 @@ router.get("/", async (req, res) => {
 });
 
 
-router.post("/", verifyToken, async (req, res) => {
+router.post("/", async (req, res) => {
    const product = new ProductModel(req.body);
    try {
       const response = await product.save();
@@ -27,7 +26,7 @@ router.post("/", verifyToken, async (req, res) => {
 });
 
 
-router.put("/", verifyToken, async (req, res) => {
+router.put("/", async (req, res) => {
    try {
       const product = await ProductModel.findById(req.body.productID);
       const user = await UserModel.findById(req.body.userID);
@@ -63,4 +62,3 @@ router.get("/savedProducts/:userID", async (req, res) => {
 });
 
 export { router as productsRouter };
-
