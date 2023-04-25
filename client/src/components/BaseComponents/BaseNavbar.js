@@ -72,13 +72,10 @@ function BaseNavbar() {
                                             </div>
                                             <ul class="py-2" aria-labelledby="user-menu-button">
                                                 <li>
-                                                    <Link to="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</Link>
-                                                </li>
-                                                <li>
                                                     <a href="/productForm" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Add product</a>
                                                 </li>
                                                 <li>
-                                                    <Link to="/cart" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Cart</Link>
+                                                    <a href="/cart" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Cart</a>
                                                 </li>
                                                 <li>
                                                     <a href="/" onClick={logout} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>

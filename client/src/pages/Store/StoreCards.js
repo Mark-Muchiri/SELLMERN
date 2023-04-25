@@ -71,7 +71,7 @@ function StoreCards() {
                     {/* ================================== CARD ================================== */}
                     {products.map((product) => (
 
-                        <div key={product._id} className=" w-11/12 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 hover:transition hover:ease-in hover:duration-15">
+                        <div key={product._id} className=" w-11/12 max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 hover:transition hover:ease-in hover:duration-15 hover:bg-slate-300 hover:dark:bg-slate-800">
                             <a className="" href='/productdetail'>
                                 <img className="h-48 w-full rounded-t-lg" src={product.imageUrl} alt="product loading" />
                             </a>

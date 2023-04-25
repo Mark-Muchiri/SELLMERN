@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,8 +19,8 @@ function LoginCard() {
         try {
             const response = await axios.post("http://localhost:3001/auth/login",
                 {
-                    username,
-                    password,
+                    username: username,
+                    password: password,
                 }
             );
 
@@ -78,11 +78,11 @@ function LoginCard() {
                         <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
                     </div>
 
-                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300 grid grid-cols-2 gap-52 place-content-between">
-                        <div>Not registered?
-                            <a href="/signup" class="text-blue-700 hover:underline dark:text-blue-500">Sign Up</a>
+                    <div class=" font-medium text-gray-500 dark:text-gray-300 grid grid-cols-2 place-content-between">
+                        <div>
+                            <p class="text-m">Not registered? <a href="/signup" class="text-blue-700 hover:underline dark:text-blue-500"> Sign Up</a></p>
                         </div>
-                        <div><a href="/#" class="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a></div>
+                        
                     </div>
                 </form>
             </div>
